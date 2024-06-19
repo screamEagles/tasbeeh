@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tasbeeh</title>
+</head>
+
+<body>
+    <header>Tasbeeh</header>
+    <main>
+        <!-- name of the dhikr -->
+        <section id="dhikr-name">
+            <h1>What are you reciting:</h1>
+            <input id="txt-field" type="text" />
+        </section>
+
+        <!-- dhikr count -->
+        <section id="dhikr-count">
+            <button id="decrement-btn" onclick="decrement()">-</button>
+            <h2 id="count-el">0</h2>
+            <button id="increment-btn" onclick="increment()">+</button>
+        </section>
+
+        <!-- clear or save the count -->
+        <section>
+            <button id="reset-btn" onclick="resetTasbeeh()">Clear</button>
+            <button id="save-btn" onclick="save()">Save</button>
+        </section>
+
+        <!-- recorded list -->
+        <section>
+            <p id="records">What you have recited:</p>
+            <table id="saved-table">
+                <thead>
+                    <tr>
+                        <th>Dhikr</th>
+                        <th>Count</th>
+                        <th>Date/Time</th>
+                    </tr>
+                </thead>
+                <tbody id="saved-list"></tbody>
+            </table>
+        </section>
+
+
+        <!-- export the data, or clear it -->
+        <section>
+            <button id="download-excel-btn" onclick="downloadExcel()">Download Record</button>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

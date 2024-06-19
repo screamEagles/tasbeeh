@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono";
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 2em;
+    background-color: limegreen;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dhikr-name {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#dhikr-name h1 {
+    margin-bottom: 10px;
+}
+
+#dhikr-name input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#dhikr-count {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#dhikr-count > button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#increment-btn {
+    background-color: green;
+    color: white;
+}
+
+#increment-btn:hover {
+    background-color: darkgreen;
+}
+
+#decrement-btn {
+    background-color: red;
+    color: white;
+}
+
+#decrement-btn:hover {
+    background-color: darkred;
+}
+
+#count-el {
+    font-size: 2em;
+}
+
+#reset-btn, #save-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+#reset-btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+#reset-btn:hover {
+    background-color: #cc0000;
+}
+
+#save-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#save-btn:hover {
+    background-color: #45a049;
+}
+
+#records {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#saved-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#saved-table th, #saved-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+#saved-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+#saved-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#saved-list {
+    width: 100%;
+}
+
+#download-excel-btn {
+    cursor: pointer;
+    background-color: #45a049;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    font-size: large;
+}
+
+#download-excel-btn:hover {
+    background-color: #4CAF50;
+}
+
+@media (max-width: 600px) {
+    header {
+        font-size: 1.5em;
+    }
+
+    #dhikr-name input, 
+    #dhikr-count,
+    #reset-btn,
+    #save-btn {
+        width: 100%;
+    }
+
+    #dhikr-count > button {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    #count-el {
+        font-size: 1.5em;
+    }
+    
+    #saved-table th, #saved-table td {
+        padding: 5px;
+    }
+}
